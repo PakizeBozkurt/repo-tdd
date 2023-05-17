@@ -15,16 +15,16 @@
 
 //   expect(result).toBe(5);
 // });
-function rps() {
-  return "left";
+function rps(left) {
+  return left === "rock" ? "left" : "right";
 }
 describe("rock, paper, scissors", () => {
-  it("should say left wins for rock vs. scissors", () => {
-    const left = "rock";
-    const right = "scissors";
+it("should say right wins for scissors vs. rock", () => {
+  const left = "scissors";
+  const right = "rock";
 
-    const outcome = rps(left, right);
+  const result = rps(left, right);
 
-    expect(outcome).toBe("left");
-  });
+  expect(result).toBe("right");
+});
 });
